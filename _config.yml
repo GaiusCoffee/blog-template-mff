@@ -1,0 +1,19 @@
+# Site settings
+title: "ISO-8: A Marvel Future Fight Resource"
+email: gaius.coffee@gmail.com
+description: "ISO-8 is a website dedicated as a resource for the Netmarble Game Marvel Future Fight."
+baseurl: ""
+url: "http://gaius.coffee/iso-8"
+permalink: "/:categories/:title/"
+twitter_username: GaiusCoffee
+github_username:  GaiusCoffee
+
+# Build settings
+exclude: [
+  "CNAME"
+]
+markdown: kramdown
+gems:
+- jemoji
+- jekyll-sitemap
+- jekyll-feed
