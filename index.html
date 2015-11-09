@@ -1,4 +1,10 @@
 ---
 layout: page
 ---
-:rocket: <strong>Hello</strong>, World!
+<section>
+  <div class="container">
+    {% assign post = site.posts.first %} 
+    {% assign content = post.content %} 
+    {% include feature.html %} 
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<header>
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p>{{ post.date | date_to_long_string }}</p>
+</header>
+<article style="min-height:300px;text-align: justify;">
+  {{ content }}
+</article>
+<footer>
+  {% if post.previous %}<a href="{{post.previous.url}}">Previous</a> | {% endif %}
+  <a href="{{ '/blog' | prepend: site.baseurl }}">Archive</a>
+  {% if post.next %} | <a href="{{post.next.url}}">Next</a>{% endif %}
+</footer>
