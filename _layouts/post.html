@@ -2,4 +2,21 @@
 layout: default
 ---
 {% include banner.html %}
-{{ content }}
+<div class="container">
+  <header>
+    <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+    <p>{{ page.date | date_to_long_string }} | 
+      {% for tag in page.tags %}
+      {{ tag }}&nbsp;
+      {% endfor %}
+    </p>
+  </header>
+  <article style="min-height:300px;text-align: justify;">
+    {{ content }}
+  </article>
+  <footer>
+    {% if page.previous %}<a href="{{page.previous.url}}">Previous</a> | {% endif %}
+    <a href="{{ '/blog' | prepend: site.baseurl }}">Archive</a>
+    {% if page.next %} | <a href="{{page.next.url}}">Next</a>{% endif %}
+  </footer>
+</div>
